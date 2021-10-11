@@ -1,0 +1,141 @@
+.customer {
+    padding-bottom: 65px;
+    .boxed {
+        margin-bottom: 60px;
+
+        .heading {
+            max-width: 440px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .text {
+            line-height: calc(30/16);
+        }
+    }
+
+    // &-list {
+    //     display: grid;
+    //     grid-template-columns: repeat(3, 1fr);
+    //     grid-gap: 0 50px;
+    // }
+
+    &-item {
+        padding: 30px;
+        border: 2px solid $pray-lighter-color;
+        box-sizing: border-box;
+        border-radius: 10px;
+
+        &.slick-current.slick-active {
+            border-color: $primary-color;
+        }
+    }
+
+    &-top {
+        margin-bottom: 20px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-info {
+        display: flex;
+        align-items: center;
+        gap: 0 20px;
+    }
+
+    &-avatar {
+        width: 50px;
+        height: 50px;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 100rem;
+        }
+    }
+
+    &-name {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        line-height: 1;
+    }
+
+    &-address {
+        font-size: 14px;
+        line-height: 1;
+    }
+
+    &-rating {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 10px;
+    }
+
+    //css slick slider
+    .slick-track {
+        display: flex;
+        gap: 0 50px;
+        margin-left: -30px;
+        padding-bottom: 60px;
+    }
+
+    .slick-dots {
+        display:flex;
+        align-items: center;
+        gap: 0 15px;
+        list-style: none;
+
+        button {
+            background-color: $pray-color;
+            font-size: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 100rem;
+            transition: all 0.2s linear;
+        }
+
+        .slick-active button {
+            background-color: $primary-color;
+            width: 45px;
+            
+        }
+    }
+
+    .slick-prev,
+    .slick-next {
+        width: 60px;
+        height: 60px;
+        border-radius: 100rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $primary-color;
+        background-color: transparent;
+        position: absolute;
+        bottom: 0;
+        transform: translateY(50%);
+
+        svg {
+            color: $primary-color;
+        }
+
+        &:hover {
+            background-color: $primary-color;
+            svg {
+                color: white;
+            }
+        }
+    }
+
+    .slick-prev {
+        right: 80px;
+    }   
+
+    .slick-next {
+        right: 0;
+    }
+}
